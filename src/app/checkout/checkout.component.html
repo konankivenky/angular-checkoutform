@@ -1,0 +1,207 @@
+
+<div class="container w-75">
+
+    <div class="text-center my-3">
+        <img src="https://sheleaps.org/wp-content/uploads/2018/07/Bootstrap-4-1.png" />
+    </div>
+    <div class="text-center">
+        <h2>
+                Checkout form
+        </h2>
+        <p class="contentinformaton text-muted">
+            Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+        </p>
+    </div>
+
+    <div class="row my-5" >
+        <div class="col-md-8">
+            <h4>Billing address</h4>
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="form-group">
+                        <label for="firstname">First name</label>
+                    <input type="text" class="form-control" id="firstname" [(ngModel)]="firstname">
+                   </div>
+                </div>
+                <div class="col-md-6">
+                        <div class="form-group">
+                                <label for="lastname">Last name</label>
+                            <input type="text" class="form-control" id="lastname" [(ngModel)]="lastname">
+                        </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">User name</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="user name" id="username" [(ngModel)]="username">
+                </div>
+               
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email<strong class="text-muted">(Optional)</strong></label>
+                <input type="email" class="form-control" placeholder="you@example.com" id="email" [(ngModel)]="email">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="textarea" class="form-control" placeholder="1234 main st" id="address" [(ngModel)]="address">
+            </div>
+            <div class="form-group">
+                <label for="address2">Address 2<strong class="text-muted">(Optional)</strong></label>
+                <input type="textarea" class="form-control" placeholder="Apartment or suite" id="address2" [(ngModel)]="address2">
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="Country">Country</label>
+                        <select class="custom-select " id="Country" [(ngModel)]="country">
+                            <option>Choose..</option>
+                            <option>India</option>
+                            <option>america</option>
+                            <option>North korea</option>
+                            <option>Russia</option>
+                            <option>Uk</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                        <div class="form-group">
+                                <label for="state">State</label>
+                                <select class="custom-select" id="Country" [(ngModel)]="state">
+                                    <option>Choose..</option>
+                                    <option>Andra pradesh</option>
+                                    <option>TS</option>
+                                    <option>TN</option>
+                                    <option>Karnataka</option>
+                                    <option>kerala</option>
+                                </select>
+                            </div>
+
+                </div>
+                <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="zip">Zip</label>
+                            <input type="text" class="form-control" id="zip" [(ngModel)]="zip">
+                        </div>
+                </div>
+            </div>
+            <hr>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="shopping" [(ngModel)]="checkbox">
+               <label for="shopping"> Shipping address is the same as my billing address</label>
+            </div>
+            <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save" [(ngModel)]="checkbox2">
+                   <label for="save"> Save this information for next time</label>
+                </div>
+                <hr>
+                <h4>Payment</h4>
+                <div class="form-check">
+                        <input type="radio" class="form-check-input" name="peyment" id="credit" [(ngModel)]="radio" value="creditcard">
+                        <label for="credit">Credit Card</label>
+                    </div>
+                    <div class="form-check">
+                            <input type="radio" class="form-check-input" name="peyment" id="debit" [(ngModel)]="radio1" value="debitcard">
+                            <label for="debit">Debit Card</label>
+                        </div>
+                        <div class="form-check">
+                                <input type="radio" class="form-check-input" name="peyment" id="paypal" [(ngModel)]="radio2" value="paypal">
+                                <label for="paypal">Pay Pal</label>
+                            </div>
+        <div class="row my-4">
+            <div class="col-md-6">
+                <label for="card">Name on Crad</label>
+                <input type="text" class="form-control" id="card" [(ngModel)]="nameoncard">
+
+                <span class=" text-muted">Full name as displayed on card</span>
+                <div class="row my-4" >
+                    <div class="col-md-6">
+                        <label for="expiration">Expiration</label>
+                        <input type="text" class="form-control" id="expiration" [(ngModel)]="expiration" >
+                    </div>
+                    <div class="col-md-6">
+                            <label for="cvv">CVV</label>
+                            <input type="text" class="form-control" id="cvv" [(ngModel)]="cvv">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                    <label for="creditcard">Credit Card Number</label>
+                    <input type="text" class="form-control" id="creditcard" [(ngModel)]="creditcardnumber">
+    
+            </div>
+        </div>
+        <hr>
+          <button class="btn btn-primary text-white btn-block btn-lg" (click)="continuedata()">Continue to Checkout</button>      
+        </div>
+        <div class="col-md-4">
+            <h4>Your Cart</h4>
+            <div class="">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div class="">
+                                <h6>Product Name</h6>
+                                <small>
+                                    Brief description
+                                </small>
+                        </div>
+                      <h5 class="text-muted">$12</h5>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                            <div class="">
+                                    <h6>Secoundproduct</h6>
+                                    <small>
+                                        Brief description
+                                    </small>
+                            </div>
+                          <h5  class="text-muted">$8</h5>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                                <div class="">
+                                        <h6>Third item</h6>
+                                        <small>
+                                            Brief description
+                                        </small>
+                                </div>
+                              <h5  class="text-muted">$5</h5>
+                            </li>
+                            <li class="list-group-item d-flex text-success justify-content-between bg-light">
+                                    <div class="">
+                                            <h6>Promo code</h6>
+                                            <small>
+                                                EXAMPLECODE
+                                            </small>
+                                    </div>
+                                  <h5  class="text-muted">-$5</h5>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                
+                                                <h6>Total(USD)</h6>
+                                              
+                                
+                                      <h5>$20</h5>
+                                    </li>
+                                  
+                </ul>
+                <ul class="list-group my-3">
+                    <li class="list-group-item">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="promo code" [(ngModel)]="promocode">
+                            <div class="input-group-append">
+                                <div class="input-group-text bg-dark text-white">Redeem </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
